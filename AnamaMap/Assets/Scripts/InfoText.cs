@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class InfoText : MonoBehaviour
 {
-    public List<TextInfos<string,int>> t = new List<TextInfos<string, int>>();
+    public InfoLineText[] infoLineTexts;
 
 
-}
-[System.Serializable] 
-public class TextInfos<T,K>
-{
-    //public string name = T.ToString();
+    public static InfoText instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public void MainChange(string[] names)
+    {       
+        for (int i = 0; i < infoLineTexts.Length; i++)
+        {
+            infoLineTexts[i].TextMain.text = names[i];
+        }
+    }
+    public void InfoChange(string[] names)
+    {
+        print("InfoChange");
+        for (int i = 0; i < infoLineTexts.Length; i++)
+        {
+            infoLineTexts[i].TextInfo.text = names[i];
+        }
+    }
 }

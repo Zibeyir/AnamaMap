@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Statistics : MonoBehaviour
 {
-
+    public static Statistics instance;
     public float time;
     public float Max;
     public Color color1;
@@ -20,7 +20,7 @@ public class Statistics : MonoBehaviour
     
     void Start()
     {
-
+        instance = this;
         for (int i = 0; i < sliders.Length; i++)
         {
             sliders[i].text1.text = Diagrams[i].Ha.ToString();
@@ -32,17 +32,22 @@ public class Statistics : MonoBehaviour
 
         }
 
-        FillAmount();
     }
-    public void ActiveStatics()
+    public void ResetStatics()
     {
-       
-        FillAmount();
+
+        foreach (var item in sliders)
+        {
+            item.slider1.value = 0;
+            item.slider2.value = 0;
+
+        }
     }
 
     
-    private void FillAmount()
+    public void FillAmount()
     {
+        
         for (int i = 0; i < sliders.Length; i++)
         {          
             sliders[i].slider1.DOValue(Diagrams[i].Ha / Max, time, false);
