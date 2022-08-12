@@ -19,7 +19,6 @@ partial class RegionManager
             item.ImageF(1, timeColorChange);
             
         }
-        MapInfoButtonsAnime.PlayApearAnim();
     }
     
 }

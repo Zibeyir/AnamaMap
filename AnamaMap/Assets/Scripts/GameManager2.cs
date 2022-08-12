@@ -17,7 +17,9 @@
     #region ButtonApear
     void AOE_Button()
     {
+        //MainText.PlayDisApearAnim();
         Logo1Animation.PlayApearAnim();
+        ChangeMainButton("AOE");
 
     }
     void LGB_Button()
@@ -80,6 +82,21 @@
     {
         LGB.PlayApearAnim();
 
+    }
+    public void ChangeMainButton(string _name)
+    {
+        foreach (var item in mainButtonsFaid)
+        {
+            if (item.Name==_name)
+            {
+               
+                item.ImageF(1);
+            }
+            else
+            {
+                item.ImageF(0.5f);
+            }
+        }
     }
 }
 

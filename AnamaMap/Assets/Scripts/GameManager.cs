@@ -18,6 +18,7 @@ public partial class  GameManager : MonoBehaviour
     public float timeAnime;
     public GameObject MainMoveAnimations;
     public MoveAnimation[] moveanimations;
+    public MainButtonFaid[] mainButtonsFaid;
     [Header("Maps")]
     public float TimeMapFaid;
     [SerializeField] Image[] Maps;
@@ -38,6 +39,7 @@ public partial class  GameManager : MonoBehaviour
 
     void Start()
     {
+        //MainText.PlayDisApearAnim();
         instance = this;
         moveanimations = MainMoveAnimations.GetComponentsInChildren<MoveAnimation>();
         animationController = new AnimationController[Buttons.Length];
@@ -49,14 +51,16 @@ public partial class  GameManager : MonoBehaviour
         {
             item.Time = timeAnime;
         }
+        ChangeMainButton(SelectedButton);
+
     }
 
-   
+
     public void ButtonMain(string selectButton)
     {
         if (selectButton!=SelectedButton)
         {
-            
+            ChangeMainButton(selectButton);
             DisAppearMain(SelectedButton);
             if (selectButton=="RUB")
             {
@@ -95,6 +99,7 @@ public partial class  GameManager : MonoBehaviour
         switch (SelectedButton)
         {
             case "AOE":
+                
                 AOE_Button();
                 break;
             case "LGB":
@@ -114,10 +119,15 @@ public partial class  GameManager : MonoBehaviour
 
     public void MapChange(Sprite SelectedMap)
     {
-        MapNum = (MapNum==0) ?  1 : 0;
-        Maps[MapNum].sprite = SelectedMap;
-        Maps[MapNum].DOFade(1, TimeMapFaid);
-        Maps[(MapNum == 0) ? 1 : 0].DOFade(0, TimeMapFaid);
+        
+        if (Maps[MapNum].sprite!=SelectedMap)
+        {
+            MapNum = (MapNum == 0) ? 1 : 0;
+            Maps[MapNum].sprite = SelectedMap;
+            Maps[MapNum].DOFade(1, TimeMapFaid);
+            Maps[(MapNum == 0) ? 1 : 0].DOFade(0, TimeMapFaid);
+        }
+        
 
 
     }

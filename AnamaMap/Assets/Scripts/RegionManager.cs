@@ -14,7 +14,7 @@ public partial class RegionManager : MonoBehaviour
     [SerializeField] RegionsData regionsData;
     [SerializeField] InfoText InfoText;
 
-
+    public float TimeButtonChange() => timeColorChange;
     private void Start()
     {   
         instance = this;
@@ -24,6 +24,8 @@ public partial class RegionManager : MonoBehaviour
 
     public void RegionSelect(RegionBool regionBool)
     {
+        MapInfoButtonsAnime.PlayApearAnim();
+
         GameManager.instance.LGB_Active();
         if (regionBool!=exSelectedRegion)
         {

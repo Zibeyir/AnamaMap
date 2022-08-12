@@ -22,7 +22,7 @@ public class InfoText : MonoBehaviour
     }
     public void InfoChange(string[] names)
     {
-        print("InfoChange");
+      
         for (int i = 0; i < infoLineTexts.Length; i++)
         {
             infoLineTexts[i].TextInfo.text = names[i];
