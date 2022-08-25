@@ -557,7 +557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Minalardan Temizlenmis Eraziler
+  m_Text: "Minalardan T\u0259mizl\u0259nmi\u015F \u018Frazil\u0259r"
 --- !u!222 &82476797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9dab6bba35771fb4d83b47e90edbda49, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Azad Olunmus Eraziler
+  m_Text: "Azad Olunmu\u015F \u018Frazil\u0259r"
 --- !u!222 &260547822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3410,7 +3410,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9dab6bba35771fb4d83b47e90edbda49, type: 3}
     m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
@@ -3422,7 +3422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Layihelere Gore Bolgu
+  m_Text: "Layih\u0259l\u0259r\u0259 G\xF6r\u0259 B\xF6lg\xFC"
 --- !u!222 &812227926
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3684,7 +3684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rayonlar Uzre Bolgu
+  m_Text: "Rayonlar \xDCzr\u0259 B\xF6lg\xFC"
 --- !u!222 &911349281
 CanvasRenderer:
   m_ObjectHideFlags: 0
