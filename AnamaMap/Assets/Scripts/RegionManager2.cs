@@ -16,7 +16,7 @@ partial class RegionManager
     {
         foreach (var item in RegionBools)
         {
-            item.ImageF(1, timeColorChange);
+            item.ImageF(.5f, timeColorChange);
             
         }
     }
